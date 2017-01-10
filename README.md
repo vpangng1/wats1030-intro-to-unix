@@ -33,4 +33,4 @@ The *basic requirements* for completing this assignment are:
 ## Stretch Requirements
 The *stretch requirements* for this assignment are:
 
-1. Complete the additional files in the `nix_scavenger_hunt_stretch.md` file
+1. Complete the challenge found in the `nix_scavenger_hunt_stretch.md` file. It will take more than one step, and you will definitely know when you have found the answer.
