@@ -6,3 +6,4 @@ The following individuals have completed the Stretch Goal Scavenger Hunt success
 * Fernando José Delgado
 * Ryan Amarit
 * Dov Dekeyser
+* Luke Schaefer
