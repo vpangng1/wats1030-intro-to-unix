@@ -16,7 +16,7 @@ and then clone it to your development environment.
 
 * Paste the output of the `pwd` command here: /home/cabox/workspace
 * What directories and files do you see when you run `ls`? LICENSE file, challenge_files directory, nix_scavenger_hunt_stretch.md file, README.md file, nix_scavenger_hunt.md file, and super_scavenger.md file
-* ls will list the contents in the current directory. ls -alh is ls with three separate options. `-a` will list all files beginning with `.`, `-l` will list the files in a long format, `-h` will list the file size in human readable format
+* You can use options to modify how a command runs. Try using ls -alh to see the contents of your current directory. How are the results different when you use the -alh options?: all files and directories within the workspace are listed in a long format. There are additional details about the files like the file size and permission levels
 * Then use `man` to learn what the `a`, `l`, and `h` options mean when used with the `ls` command: `-a` will list all files beginning with `.`, `-l` will list the files in a long format, `-h` will list the file size in human readable format
 * Commands can also take *arguments*, which are usually the names of files or locations that you want the command to work with. Try running `ls /` to see what files are in the *root* directory of the filesystem: bin, boot, dev, etc, fastboot, home, lib, lib64, media, mnt, opt, proc, root, run, sbin, srv, sys, tmp, usr, var 
 * A Unix filesystem has a few special shortcuts to refer to specific locations. `/` indicates the *root* of the filesystem, meaning the top-most directory in the filesystem hierarchy. Use the `cd` ("change directory") command to move to the root directory: /
@@ -24,13 +24,13 @@ and then clone it to your development environment.
 * Change directory into the `challenge_files` directory. Use `ls` to find only the files with a `.demo` pattern.: 3
 * Use the `cd` command to move "up" one directory.: /home/cabox/workspace
 * Press the up arrow on your keyboard. The previous command `pwd` gets displayed in the console
-* Press the up arrow a few more times. ls -1 | grep 'demo'
-* Run the `history` command.: the history command displays all commands that have been entered in the console starting with the oldest
+* Press the up arrow a few more times. ls -l | grep 'demo'
+* Run the `history` command.: the history command displays all commands that have been entered in the console starting with the oldest to the most recent in numeric order
 
 ### Observing the System
 
 * Discover what account you are logged into using the `whoami` command.: cabox
-* Discover who else is on your system with the `who` command.: no
+* Discover who else is on your system with the `who` command. Are any other users using your system?: no
 * How long has your system been running?: 21:04:48 up 56 min, 1 user, load average: 0.00, 0.00, 0.00
 * Run `ps aux` and review the results.: process status displays information about the processes that have controlling terminals. `aux` are 3 separate options. `-a` displays information about all the users' processes running a controlling terminal. `-u` displays proccess belonging to each specified username. `-x` displays processes that do not run on terminals. Together this command displays all processes regardless of whether the terminal is on or off.
 * Run `top` and review the results.: Unlike ps which takes a snapshot of the processes running at the time, the `top` command displays the real time information about the processes that are running.
@@ -46,5 +46,5 @@ and then clone it to your development environment.
 ### Pipes and Connecting Commands
 
 * Sometimes it's useful to output the results of a command to a text file for further analysis, reference, or processing. Try running `ls > files.txt`. Notice that the file `files.txt` was created. View that file using `more`. What do you see in the `files.txt` file?: list of the directories and files of the challenge_files directory
-* Notice that if you run `ls -alh` in the `challenge_files` directory, the files scroll by very quickly. Sometimes it would be better to get the results in a paginated format. Try running `ls -alh | more`. Describe what you see when you run `ls -alh | more`.: `-a` will list all files beginning with `.`, `-l` will list the files in a long format, `-h` will list the file size in human readable format. 
+* Notice that if you run `ls -alh` in the `challenge_files` directory, the files scroll by very quickly. Sometimes it would be better to get the results in a paginated format. Try running `ls -alh | more`. Describe what you see when you run `ls -alh | more`.:  all files and subdirectories are listed in a long format. There are additional details about the files like the file size and permission levels
 * Earlier, when you viewed the list of active processes on your devbox using `ps aux`, the list was probably really long. You can make this list more manageable by using the pipe (`|`) to filter the results of `ps` using `grep`. Run `ps aux | grep <your_username>` to see what processes are running for your specific user. Paste the list of processes that reference your username here: 538, 540, 541, 542, 544, 545, 780, 781
